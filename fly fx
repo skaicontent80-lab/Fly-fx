@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Business Profile Optimization | Rank #1 Locally</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            /* ব্যাকগ্রাউন্ড ওয়ালপেপার এবং ডার্ক ওভারলে */
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.92)), 
+                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            background-attachment: fixed;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* নেভিগেশন বার */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #4285F4; /* Google Blue */
+        }
+
+        .nav-btn {
+            background: #4285F4;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #3367D6;
+            transform: translateY(-2px);
+        }
+
+        /* হিরো সেকশন */
+        .hero {
+            text-align: center;
+            padding: 100px 8% 70px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(66, 133, 244, 0.2);
+            color: #60a5fa;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(66, 133, 244, 0.4);
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cbd5e1;
+            margin-bottom: 35px;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #34A853; /* Google Green */
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #2b8a44;
+            box-shadow: 0 10px 20px rgba(52, 168, 83, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* সার্ভিস কার্ড সেকশন */
+        .services {
+            padding: 60px 8%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 30px;
+            border-radius: 16px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #4285F4;
+        }
+
+        .card-icon {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #f8fafc;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        /* অডিট / কন্টাক্ট ফর্ম */
+        .contact-section {
+            padding: 60px 8% 100px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .form-box {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .form-box h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .form-box p {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .input-group input:focus, .input-group textarea:focus {
+            border-color: #4285F4;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #4285F4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #3367D6;
+        }
+
+        #success-msg {
+            display: none;
+            text-align: center;
+            color: #34A853;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">GMB<span>Pro</span></div>
+        <a href="#audit" class="nav-btn">Free Profile Audit</a>
+    </header>
+
+    <section class="hero">
+        <div class="badge">🚀 Local SEO & Google Maps Ranking Expert</div>
+        <h1>Rank #1 on Google Maps with <span>Google Profile Optimization</span></h1>
+        <p>Turn local searches into paying customers. We optimize your Google Business Profile to increase calls, website visits, and foot traffic organically.</p>
+        <div class="cta-group">
+            <a href="#audit" class="btn-primary">Get Free GMB Audit</a>
+            <a href="#services" class="btn-secondary">Explore Services</a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">What We Optimize For Your Business</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">📍</div>
+                <h3>Complete Profile Setup</h3>
+                <p>Accurate NAP (Name, Address, Phone), primary & secondary categories, and keyword-rich business descriptions.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⭐</div>
+                <h3>Review & Reputation Growth</h3>
+                <p>Proven strategies to get 5-star customer reviews and professional SEO-friendly responses to every review.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📸</div>
+                <h3>Geo-Tagged Photos & Posts</h3>
+                <p>Weekly Google Business updates, offers, and geo-tagged high-resolution photos to boost local relevance.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📈</div>
+                <h3>Local Citations & Map Pack</h3>
+                <p>High-authority directory listings and local backlinks to push your business into the Google Top 3 Map Pack.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="audit">
+        <div class="form-box">
+            <h2>Request a Free GMB Audit</h2>
+            <p>Enter your business details below and get a complete ranking report within 24 hours.</p>
+            <form id="auditForm">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Business Name & City" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Your Email Address" required>
+                </div>
+                <div class="input-group">
+                    <textarea rows="3" placeholder="Tell us about your business goals..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Get My Free Audit Now</button>
+                <div id="success-msg">✅ Thank you! Your audit request has been received.</div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 GMBPro Local SEO Services. All Rights Reserved.
+    </footer>
+
+    <script>
+        document.getElementById('auditForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('success-msg').style.display = 'block';
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
